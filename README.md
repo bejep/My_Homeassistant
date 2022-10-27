@@ -1,8 +1,8 @@
 # Homeassistant
 ## Mit udstyr
-- Raspberry Pi4
-- Argon ONE M.2 Case
-- 128Gb m.2 SSD 
+- [Raspberry Pi4](https://raspberrypi.dk/produkt/raspberry-pi-4-model-b-4-gb/) 
+- [Argon ONE M.2 Case](https://raspberrypi.dk/produkt/argon-one-case-til-pi-4-aluminium-med-koeling/)
+- [128Gb m.2 SSD](https://raspberrypi.dk/produkt/120gb-m-2-ssd-sata-600/)
 
 ## 5. Automatiseringer
 - Personstyring
