@@ -31,7 +31,7 @@
 - Apexcharts-card
 - slider-entity-card
 - Mushroom
-## 3.                  
+## 3. Lovelace                 
 ## 4. Automatiseringer
 - Personstyring
 - Bevægelse Entre
