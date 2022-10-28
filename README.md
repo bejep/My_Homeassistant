@@ -7,7 +7,7 @@
 
 ## 1. HomeAssistant installation
 - (kommer senere)
-## 2. Tilføjelsesprogrammer
+### Tilføjelsesprogrammer
 - ArgonOne Active Cooling
 - Check Home Assistant configuration
 - Cloudflared
@@ -19,20 +19,20 @@
 - Samba share
 - Studio Code Server
 - Terminal & SSH
-## 3. HACS
-### Integrationer
+## 2. HACS
+#### Integrationer
 - nordpool
 - Eloverblik
 - Watchman
-### Frontend
+#### Frontend
 - button-card
 - Mini Media Player
 - mini-graph-card
 - Apexcharts-card
 - slider-entity-card
 - Mushroom
-## 4. 
-## 5. Automatiseringer
+## 3.                  
+## 4. Automatiseringer
 - Personstyring
 - Bevægelse Entre
 - Postkasse alarm
