@@ -5,6 +5,33 @@
 - [128Gb m.2 SSD](https://raspberrypi.dk/produkt/120gb-m-2-ssd-sata-600/)
 - [Sonoff zigbee dongle](https://mackabler.dk/sonoff-zigbee-cc2531-usb-dongle-3685.html?q=sonoff%20zigbee+2.0)
 
+## 1. HomeAssistant installation
+- (kommer senere)
+## 2. Tilføjelsesprogrammer
+- ArgonOne Active Cooling
+- Check Home Assistant configuration
+- Cloudflared
+- ESPHome
+- File editor
+- MariaDB
+- Mosquitto broker
+- motioneye
+- Samba share
+- Studio Code Server
+- Terminal & SSH
+## 3. HACS
+### Integrationer
+- nordpool
+- Eloverblik
+- Watchman
+### Frontend
+- button-card
+- Mini Media Player
+- mini-graph-card
+- Apexcharts-card
+- slider-entity-card
+- Mushroom
+## 4. 
 ## 5. Automatiseringer
 - Personstyring
 - Bevægelse Entre
