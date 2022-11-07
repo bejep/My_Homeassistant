@@ -33,8 +33,8 @@
 - Mushroom
 ## 3. Lovelace                 
 ## 4. Automatiseringer
-- Personstyring
-- Bevægelse Entre
+- [Personstyring](https://github.com/bejep/My_Homeassistant/blob/79937b542e16227145347fee3b06759a1542bf7e/Automatiseringer/README.md#L6)
+- [Bevægelse Entre](https://github.com/bejep/My_Homeassistant/blob/79937b542e16227145347fee3b06759a1542bf7e/Automatiseringer/README.md#L10)
 - Postkasse alarm
 ## 6. 
 ## 7. 
