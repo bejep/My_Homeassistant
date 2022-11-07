@@ -8,6 +8,7 @@
 
 
 ### 2. Entre:
-- xx
+- [YAML kode](Images/Test%20YAML)
+- 
 
 
