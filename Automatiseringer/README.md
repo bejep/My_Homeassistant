@@ -1,9 +1,62 @@
 # Automatiseringer
 ## 1. Personstyring
 - Installer HomeAssistant på mobiltelefon
+  
 
 ## 2. Entre
-- [YAML kode](Images/Test%20YAML)
-- 
+* Link til esp32 projekt  *(kommer senere)*
+* YAML kode
+```YAML
+alias: Bevægelse Entre 
+description: ""
+trigger:
+  - platform: state
+    entity_id: binary_sensor.pir_sensor
+    from: "off"
+    to: "on"
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 0
+condition:
+  - condition: state
+    entity_id: sun.sun
+    state: below_horizon
+action:
+  - choose:
+      - conditions:
+          - condition: time
+            after: "00:00"
+            before: "06:00"
+        sequence:
+          - type: turn_on
+            device_id: 15dce4b5bd0e93580a48dfcf0735788a
+            entity_id: light.entre_ikea_806lm_level_on_off
+            domain: light
+            brightness_pct: 10
+    default:
+      - type: turn_on
+        device_id: 15dce4b5bd0e93580a48dfcf0735788a
+        entity_id: light.entre_ikea_806lm_level_on_off
+        domain: light
+        brightness_pct: 80
+  - wait_for_trigger:
+      - platform: state
+        entity_id: binary_sensor.pir_sensor
+        from: "on"
+        to: "off"
+        for:
+          hours: 0
+          minutes: 0
+          seconds: 0
+  - type: turn_off
+    device_id: 15dce4b5bd0e93580a48dfcf0735788a
+    entity_id: light.entre_ikea_806lm_level_on_off
+    domain: light
+mode: single
+```
+
 ## 3. Postkasse alarm
 
+
+## 4. Vaskemaskine færdig
