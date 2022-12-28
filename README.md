@@ -9,6 +9,7 @@
 - Sonoff SNZB-04 Door/Window sensor
 - Aqara Temperatur and Humitidy sensor
 - Aqara Door and Window sensor
+- Aqara Vibration sensor
 - Ikea TRÅDFRI LED-pærer og kontakter
 - Shelly 1PM og Shelly Plug S
 
