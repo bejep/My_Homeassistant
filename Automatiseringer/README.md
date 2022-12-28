@@ -55,7 +55,7 @@ action:
     domain: light
 mode: single
 ```
-* YAML kode ved tryk på button_1 tænd lys
+* YAML kode ved tryk på button_1 tænd lys manuelt
 ```YAML
 alias: Entre lys
 description: ""

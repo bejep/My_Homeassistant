@@ -62,5 +62,3 @@
 - Tænd/sluk relæ m. ESP8266-12
 - Temperaturføler m. ESP8266-01 og DS18B20
 
-
-[def]: https://github.com/bejep/My_Homeassistant/blob/dd69817decf3420c56fd3a48fb05f9cb999a8aea/Automatiseringer/README.md#L114
