@@ -112,8 +112,8 @@ mode: single
 ```
 
 ## 4. Vaskemaskine færdig
-- Shelly 1PM Power måler strømforbrug
-- Hvis strømforbrug falder til under 5W i 3 min. anses vask for færdig
+- Shelly 1PM Power måler strømforbrug<br>
+  Hvis strømforbrug falder til under 5W i 3 min. anses vask for færdig
 ![](/My_Homeassistant/Automatiseringer/Images/vaskemaskine.png)
 - YAML kode for Blueprint
 ```YAML
