@@ -50,7 +50,7 @@
 - [Personstyring](https://github.com/bejep/My_Homeassistant/blob/e2ec93f43bc844b34331fadeb193f1a7ad6cc2d9/Automatiseringer/README.md#L2)
 - [Bevægelse Entre](https://github.com/bejep/My_Homeassistant/blob/e2ec93f43bc844b34331fadeb193f1a7ad6cc2d9/Automatiseringer/README.md#L6)
 - [Postkasse alarm](hhttps://github.com/bejep/My_Homeassistant/blob/e2ec93f43bc844b34331fadeb193f1a7ad6cc2d9/Automatiseringer/README.md#L90)
-- [Vaskemaskine færdig](https://github.com/bejep/My_Homeassistant/blob/dd69817decf3420c56fd3a48fb05f9cb999a8aea/Automatiseringer/README.md#L114)
+- [Vaskemaskine færdig](https://github.com/bejep/My_Homeassistant/blob/e2ec93f43bc844b34331fadeb193f1a7ad6cc2d9/Automatiseringer/README.md#L114)
 ## 6. 
 ## 7. 
 ## 8. 
@@ -61,3 +61,6 @@
 - Regnmåler
 - Tænd/sluk relæ m. ESP8266-12
 - Temperaturføler m. ESP8266-01 og DS18B20
+
+
+[def]: https://github.com/bejep/My_Homeassistant/blob/dd69817decf3420c56fd3a48fb05f9cb999a8aea/Automatiseringer/README.md#L114
