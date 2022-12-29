@@ -50,7 +50,7 @@
 ## 4. Automatiseringer
 - [Personstyring](./Automatiseringer/README.md#L2)
 - [Bevægelse Entre](./Automatiseringer/README.md#L8)
-- [NY Post alarm](.Automatiseringer/README.md#L92)
+- [NY Post alarm](./Automatiseringer/README.md#L92)
 - [Vaskemaskine færdig](./Automatiseringer/README.md#L116)
 ## 6.
 ## 7. 
