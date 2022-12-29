@@ -6,7 +6,7 @@
   
 
 ## 2. Entre
-* Link til esp32 projekt  *(kommer senere)*
+* [Link til esp32 projekt](./ESPHome/README.md#styringspanel-esp8266-12-m-oled-lcd)
 * YAML kode ved bevægelse i entre
 ```YAML
 alias: Bevægelse Entre 
