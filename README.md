@@ -55,7 +55,7 @@
 - https://vscode.dev/github/bejep/My_Homeassistant/blob/2662da5d991c343a25413e027cecab73ab8f6dca/Automatiseringer/README.md#L114
 - https://github.com/bejep/GitHub/blob/2662da5d991c343a25413e027cecab73ab8f6dca/Automatiseringer/README.md#L90
 - [Postkasse](https://github.com/bejep/GitHub/blob/2662da5d991c343a25413e027cecab73ab8f6dca/Automatiseringer/README.md#L90)
-- https://github.com/bejep/GitHub/blob/main/My_Homeassistant/Automatiseringer/README.md#L114
+- [](https://github.com/bejep/GitHub/blob/main/My_Homeassistant/Automatiseringer/README.md#L114)
 ## 6. 
 ## 7. 
 ## 8. 
