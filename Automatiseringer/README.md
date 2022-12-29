@@ -90,7 +90,10 @@ mode: single
 ```
 
 ## 3. Postkasse alarm
-- Aqara vibrationscensor Zigbee monteret på postkasselåg
+- Aqara vibrationscensor Zigbee monteret på postkasselåg.<br>
+  For at forbedre rækkevidden på Zigbee signalet, sidder der en Ikea signalforstærker på indermuren tæt på postkassen.<br>
+  Ulempen ved vibrationssensor er at kraftig blæst kan give falske meldinger.<br>
+  Ud over melding på Lovelace sendes en melding via Telegram.
 - YAML kode
 ```YAML
 alias: Post
