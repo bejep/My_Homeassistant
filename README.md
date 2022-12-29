@@ -48,7 +48,7 @@
 - Mushroom
 ## 3. Lovelace                 
 ## 4. Automatiseringer
-- [Personstyring](https://github.com/bejep/My_Homeassistant/blob/main/Automatiseringer/README.md#L2)
+- [Personstyring](./Automatiseringer/README.md#L2)
 - [Bevægelse Entre](https://github.com/bejep/My_Homeassistant/blob/main/Automatiseringer/README.md#L6)
 - [Postkasse alarm](hhttps://github.com/bejep/My_Homeassistant/blob/main/Automatiseringer/README.md#L90)
 - [Vaskemaskine færdig](https://github.com/bejep/My_Homeassistant/blob/main/Automatiseringer/README.md#L114)
