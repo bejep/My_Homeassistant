@@ -117,7 +117,7 @@ mode: single
 ![](/My_Homeassistant/Automatiseringer/Images/vaskemaskine.png)
 - YAML kode for Blueprint
 ```YAML
-alias: Vaskemaskine færdig
+alias: Vaskemaskine færdig 
 description: ""
 use_blueprint:
   path: >-
