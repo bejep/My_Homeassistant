@@ -48,10 +48,10 @@
 - Mushroom
 ## 3. Lovelace                 
 ## 4. Automatiseringer
-- [Personstyring](./Automatiseringer/README.md#L2)
-- [Bevægelse Entre](./Automatiseringer/README.md#L8)
-- [NY Post alarm](./Automatiseringer/README.md#L92)
-- [Vaskemaskine færdig](./Automatiseringer/README.md#L116)
+- [Personstyring](./Automatiseringer/README.md#1-personstyring)
+- [Bevægelse Entre](./Automatiseringer/README.md#2-entre)
+- [NY Post alarm](./Automatiseringer/README.md#3-postkasse-alarm)
+- [Vaskemaskine færdig](./Automatiseringer/README.md#4-vaskemaskine-færdig)
 ## 6.
 ## 7. 
 ## 8. 

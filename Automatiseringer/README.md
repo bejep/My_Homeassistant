@@ -132,7 +132,7 @@ use_blueprint:
           message: Vaskemaskine færdig
       - service: notify.mobile_app_lissi_iphone
         data:
-          message: Vaskemaskine færsig
+          message: Vaskemaskine færdig
     starting_hysteresis: 3
     finishing_threshold: 5
     finishing_hysteresis: 3
