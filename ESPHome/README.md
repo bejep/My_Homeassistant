@@ -6,6 +6,10 @@
    - ude og indetemperatur
    - om døre og vinduer er lukket
    - vaskemaskine forbrug
+- Hardware:
+  -  Esp8266 Wemos D1 Mini
+  -  Display OLED LCD 0.96" 12864 I2C
+  -  Motion PIR Module HC-SR501
  - esp kode:
 ```YAML
 esphome:
@@ -158,6 +162,10 @@ display:
 
 ### 4. Tænd/sluk relæ m. ESP8266-12
 - 220V relæ bruges til forskellige tænd/sluk opgaver
+- Hardware:
+  -  Esp8266 Wemos D1 Mini
+  -  Relay shield for Wemos D1 Mini
+  -  Hi-Link HLK-PM05 AC-DC 5V Step Down Buck
 - ![](Images/Relay_2.jpg)
 - esp kode:
 ```YAML
@@ -216,3 +224,49 @@ switch:
 
 ```
 ### 5. Temperaturføler m. ESP8266-01 og DS18B20
+- Hardware:
+  - ESP8266-01
+  - Dallas DS18B20
+- esp kode:
+```YAML
+esphome:
+  name: esp8266_01_temp
+  platform: ESP8266
+  board: esp01_1m
+  
+  platformio_options:
+    upload_speed: 115200
+
+wifi:
+  networks:
+  - ssid: !secret FV_WIFI_ssid
+    password: !secret FV_WIFI_pass
+  - ssid: !secret BGS_WIFI_ssid
+    password: !secret BGS_WIFI_pass
+  
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Esp8266 01 Temp Fallback Hotspot"
+    password: !secret My_AP_pass
+    
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+dallas:
+  - pin: GPIO2
+  
+sensor:
+  - platform: dallas
+    address: 0x4B3C01B5567D6928
+    resolution: 12
+    accuracy_decimals: 2
+    name: "Temperature #1" 
+```

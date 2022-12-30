@@ -57,9 +57,9 @@
 ## 8. 
 ## 9. 
 ## 10. ESPHome projekter
-- Styringspanel ESP8266-12 m. OLED LCD
+- [Styringspanel ESP8266-12 m. OLED LCD](ESPHome/README.md#1-styringspanel-esp8266-12-m-oled-lcd)
 - ESP32-Cam
 - Regnmåler
-- Tænd/sluk relæ m. ESP8266-12
-- Temperaturføler m. ESP8266-01 og DS18B20
+- [Tænd/sluk relæ m. ESP8266-12](ESPHome/README.md#4-tændsluk-relæ-m-esp8266-12)
+- [Temperaturføler m. ESP8266-01 og DS18B20](ESPHome/README.md#5-temperaturføler-m-esp8266-01-og-ds18b20)
 
