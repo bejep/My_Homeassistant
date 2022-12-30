@@ -3,7 +3,7 @@
 - Installer **HomeAssistant** på mobiltelefon<br>
   Under indstillinger vælges **Companion App**<br>
   Vælg **Lokalitet** og giv tilladelser
-  
+![](./Images/Companion.PNG)
 
 ## 2. Entre
 * [Link til esp32 projekt](./../ESPHome/README.md#1-styringspanel-esp8266-12-m-oled-lcd)

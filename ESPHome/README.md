@@ -10,6 +10,7 @@
   -  Esp8266 Wemos D1 Mini
   -  Display OLED LCD 0.96" 12864 I2C
   -  Motion PIR Module HC-SR501
+  ![](Images/Entre_0.jpg)
  - esp kode:
 ```YAML
 esphome:
