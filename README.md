@@ -4,7 +4,7 @@
 - [Argon ONE M.2 Case](https://raspberrypi.dk/produkt/argon-one-case-til-pi-4-aluminium-med-koeling/)
 - [128Gb m.2 SSD](https://raspberrypi.dk/produkt/120gb-m-2-ssd-sata-600/)
 - [Sonoff zigbee dongle](https://mackabler.dk/sonoff-zigbee-cc2531-usb-dongle-3685.html?q=sonoff%20zigbee+2.0)
-- ESP8266-01. ESP8266-12. ESP32 (se ESPHome projekter)
+- ESP8266-01. ESP8266-12. ESP32 [se ESPHome projekter](README.md#10-esphome-projekter)
 - Sonoff SNZB-03 motion sensor
 - Sonoff SNZB-04 Door/Window sensor
 - Aqara Temperatur and Humitidy sensor
