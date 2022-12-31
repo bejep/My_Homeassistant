@@ -9,8 +9,10 @@
 - Hardware:
   -  Esp8266 Wemos D1 Mini
   -  Display OLED LCD 0.96" 12864 I2C
-  -  Motion PIR Module HC-SR501<br>
+  -  Motion PIR Module HC-SR501
+    
 <img src="./Images/Entre_0.jpg" width=35% height=35%>
+
 - esp kode:
 ```YAML
 esphome:
@@ -167,7 +169,9 @@ display:
   -  Esp8266 Wemos D1 Mini
   -  Relay shield for Wemos D1 Mini
   -  Hi-Link HLK-PM05 AC-DC 5V Step Down Buck
-- ![](Images/Relay_2.jpg)
+    
+<img src="./Images/Relay_2.jpg" width=35% height=35%> 
+
 - esp kode:
 ```YAML
 esphome:
