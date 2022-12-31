@@ -10,7 +10,7 @@
   -  Esp8266 Wemos D1 Mini
   -  Display OLED LCD 0.96" 12864 I2C
   -  Motion PIR Module HC-SR501<br>
-![](Images/Entre_0.jpg)
+<img src="./Images/Entre_0.jpg" width=35% height=35%>
 - esp kode:
 ```YAML
 esphome:
@@ -271,3 +271,4 @@ sensor:
     accuracy_decimals: 2
     name: "Temperature #1" 
 ```
+
