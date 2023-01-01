@@ -4,7 +4,7 @@
   Under indstillinger vælges **Companion App**<br>
   Vælg **Lokalitet** og giv tilladelser
 
-<img src="./Images/Companion.PNG" width=35% height=35%>
+<img src="./Images/Companion1.jpg" width=35% height=35%>
 
 ## 2. Entre
 * [Link til esp32 projekt](./../ESPHome/README.md#1-styringspanel-esp8266-12-m-oled-lcd)
