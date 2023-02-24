@@ -25,6 +25,7 @@
 - MariaDB
 - Mosquitto broker
 - motioneye
+- Samba Backup
 - Samba share
 - Studio Code Server
 - Terminal & SSH
@@ -39,13 +40,15 @@
 - nordpool
 - Eloverblik
 - Watchman
+- browser_mod
 #### Frontend
+- Apexcharts-card
 - button-card
+- layout-card
 - Mini Media Player
 - mini-graph-card
-- Apexcharts-card
-- slider-entity-card
 - Mushroom
+- slider-entity-card
 ## 3. Lovelace                 
 ## 4. Automatiseringer
 - [Personstyring](./Automatiseringer/README.md#1-personstyring)
