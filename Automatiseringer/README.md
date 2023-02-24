@@ -14,7 +14,7 @@
 <img src="./Images/Companion1.jpg" width=35% height=35%>
 
 - **ESPresense** (en anden Decive trackrer)
-  - se **6. ESPresense og MQTT**<br><br>
+  - se [**6. ESPresense og MQTT**](../README.md#6-espresense-og-mqtt)<br><br>
 
 - **Definer gruppe** (/config/groups.yaml)<br>
   Hvis flere personer skal kunne trackes samtidig kan der oprettes en gruppe<br>
