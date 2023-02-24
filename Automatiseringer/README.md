@@ -1,10 +1,76 @@
 # Automatiseringer
-## 1. Personstyring
+## 1. Personstyring (Device tracker)
+- Homeassistant<br>
+  - Indstillinger<br>
+    - Vælg Personer<br>
+      - Tilføj person - vælg enhed som skal spores
+
+<img src="./Images/Person.png" width=35% height=35%>
+
 - Installer **HomeAssistant** på mobiltelefon<br>
   Under indstillinger vælges **Companion App**<br>
   Vælg **Lokalitet** og giv tilladelser
 
 <img src="./Images/Companion1.jpg" width=35% height=35%>
+
+- ESPresense (en anden Decive trackrer)
+  - (se MQTT.docs)
+
+- Definer gruppe (/config/groups.yaml)
+
+<img src="./Images/groups.png" width=35% height=35%>
+
+- entity: group.somebody home<br>
+<img src="./Images/hjemme.png" width=50% height=50%>
+
+- Eksempel på brug af automatisering
+  - Person kommer hjem og lys tændes hvis sol er gået ned. (kunne også teste på ’somebody home’)
+  
+```YAML
+alias: Bent hjemme
+description: Bent hjemme eller ude
+trigger:
+  - platform: state
+    entity_id:
+      - person.bent
+    from: not_home
+    to: home
+    id: bent hjemme
+  - platform: state
+    entity_id:
+      - person.bent
+    id: bent ude
+    from: home
+    to: not_home
+condition: []
+action:
+  - choose:
+      - conditions:
+          - condition: trigger
+            id: bent hjemme
+        sequence:
+          - if:
+              - condition: state
+                entity_id: sun.sun
+                state: below_horizon
+            then:
+              - type: turn_on
+                device_id: 15dce4b5bd0e93580a48dfcf0735788a
+                entity_id: light.entre_ikea_806lm_level_on_off
+                domain: light
+                brightness_pct: 100
+      - conditions:
+          - condition: trigger
+            id: bent ude
+        sequence:
+          - type: turn_off
+            device_id: 4bc5cef82ee22c1271d1d25126d5f2e6
+            entity_id: switch.light_relay_1
+            domain: switch
+    default:
+      - stop: ukendt betingelse
+mode: single
+```
 
 ## 2. Entre
 * [Link til esp32 projekt](./../ESPHome/README.md#1-styringspanel-esp8266-12-m-oled-lcd)
