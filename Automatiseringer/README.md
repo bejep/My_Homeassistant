@@ -1,5 +1,11 @@
 # Automatiseringer
-## 1. Personstyring (Device tracker)
+## 1. Personstyring (Device tracker)<br>
+Inspiration:<br>
+[Switch Based On Presence In Home Assistant](https://www.youtube.com/watch?v=J-b8BAefNGQ)<br>
+[Geofencing in Home Assistant](https://www.youtube.com/watch?v=pjAyRN5UiBg)<br>
+[Ultimate Presence Detection in Home Assistant](https://www.youtube.com/watch?v=AcxHt_bPlZQ)<br>
+<br>
+**Setup**
 - Homeassistant<br>
   - Indstillinger<br>
     - Vælg Personer<br>
