@@ -13,17 +13,20 @@
 
 <img src="./Images/Companion1.jpg" width=35% height=35%>
 
-- ESPresense (en anden Decive trackrer)
-  - (se MQTT.docs)
+- **ESPresense** (en anden Decive trackrer)
+  - se **6. ESPresense og MQTT**<br><br>
 
-- Definer gruppe (/config/groups.yaml)
+- **Definer gruppe** (/config/groups.yaml)<br>
+  Hvis flere personer skal kunne trackes samtidig kan der oprettes en gruppe<br>
+  Hvis 'all: false' skal kun 1 være hjemme<br>
+  Hvis 'all: true' skal alle være hjemme<br>
 
 <img src="./Images/groups.png" width=35% height=35%>
 
 - entity: group.somebody home<br>
 <img src="./Images/hjemme.png" width=50% height=50%>
 
-- Eksempel på brug af automatisering
+- **Eksempel på brug af automatisering**
   - Person kommer hjem og lys tændes hvis sol er gået ned. (kunne også teste på ’somebody home’)
   
 ```YAML
