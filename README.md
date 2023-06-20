@@ -34,11 +34,13 @@
 - Sonos
 - Netatmo
 - OpenWeatherMap
+- Mobilapp
   
 ## 2. HACS
 #### Integrationer
 - nordpool
 - Eloverblik
+- Odense Renovation
 - Watchman
 - browser_mod
 #### Frontend
@@ -49,12 +51,14 @@
 - mini-graph-card
 - Mushroom
 - slider-entity-card
+- Simple Clock Card
 ## 3. Lovelace                 
 ## 4. Automatiseringer
 - [Personstyring](./Automatiseringer/README.md#1-personstyring)
 - [Bevægelse Entre](./Automatiseringer/README.md#2-entre)
 - [NY Post alarm](./Automatiseringer/README.md#3-postkasse-alarm)
 - [Vaskemaskine færdig](./Automatiseringer/README.md#4-vaskemaskine-færdig)
+- [Affald afhentes i morgen](./Automatiseringer/README.md#5-affald-afhentes-i-morgen)
 ## 5. 
 ## 6. ESPresense og MQTT
 - kommer senere

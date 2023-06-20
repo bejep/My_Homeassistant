@@ -217,3 +217,39 @@ use_blueprint:
     finishing_hysteresis: 3
 
 ```
+
+## 5. Affald afhentes i morgen
+- Sender besked til mobil dagen før kl. 18 via Telegram
+- YAML kode
+```YAML
+alias: affald
+description: ""
+trigger:
+  - platform: time
+    at: "18:00:00"
+condition: []
+action:
+  - choose:
+      - conditions:
+          - condition: template
+            value_template: >-
+              {{
+              is_state_attr("sensor.odense_renovation_odense_reno_fengersvej_31_glas_metal_papir",
+              "countdown_days", 1) }}
+        sequence:
+          - service: notify.notifier_agurk
+            data:
+              message: I morgen hentes mad  metal og papir
+      - conditions:
+          - condition: template
+            value_template: >-
+              {{
+              is_state_attr("sensor.odense_renovation_odense_reno_fengersvej_31_plast_kartoner",
+              "countdown_days", 1) }}
+        sequence:
+          - service: notify.notifier_agurk
+            data:
+              message: I morgen hentes mad og plast
+    default: []
+mode: single
+```
