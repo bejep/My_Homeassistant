@@ -34,6 +34,7 @@
 - Sonos
 - Netatmo
 - OpenWeatherMap
+- Mobilapp
   
 ## 2. HACS
 #### Integrationer
@@ -50,6 +51,7 @@
 - mini-graph-card
 - Mushroom
 - slider-entity-card
+- Simple Clock Card
 ## 3. Lovelace                 
 ## 4. Automatiseringer
 - [Personstyring](./Automatiseringer/README.md#1-personstyring)

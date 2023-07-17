@@ -1,5 +1,11 @@
 # Automatiseringer
-## 1. Personstyring (Device tracker)
+## 1. Personstyring (Device tracker)<br>
+Inspiration:<br>
+[Switch Based On Presence In Home Assistant](https://www.youtube.com/watch?v=J-b8BAefNGQ)<br>
+[Geofencing in Home Assistant](https://www.youtube.com/watch?v=pjAyRN5UiBg)<br>
+[Ultimate Presence Detection in Home Assistant](https://www.youtube.com/watch?v=AcxHt_bPlZQ)<br>
+<br>
+**Setup**
 - Homeassistant<br>
   - Indstillinger<br>
     - Vælg Personer<br>
@@ -212,9 +218,14 @@ use_blueprint:
 
 ```
 
+<<<<<<< HEAD
 ## 5. Affaldstømning
 - HACS for Odense Renovation installeret<br>
 - Dagen før kl. 18 sendes en meddelelse via Telegram<br>
+=======
+## 5. Affald afhentes i morgen
+- Sender besked til mobil dagen før kl. 18 via Telegram
+>>>>>>> 7ac29b45a844a3b5bd46f3e8b6b9672c208fe669
 - YAML kode
 ```YAML
 alias: affald
@@ -229,7 +240,11 @@ action:
           - condition: template
             value_template: >-
               {{
+<<<<<<< HEAD
               is_state_attr("sensor.odense_renovation_odense_reno_xxxxxx_glas_metal_papir",
+=======
+              is_state_attr("sensor.odense_renovation_odense_reno_fengersvej_31_glas_metal_papir",
+>>>>>>> 7ac29b45a844a3b5bd46f3e8b6b9672c208fe669
               "countdown_days", 1) }}
         sequence:
           - service: notify.notifier_agurk
@@ -239,7 +254,11 @@ action:
           - condition: template
             value_template: >-
               {{
+<<<<<<< HEAD
               is_state_attr("sensor.odense_renovation_odense_reno_xxxxxx_plast_kartoner",
+=======
+              is_state_attr("sensor.odense_renovation_odense_reno_fengersvej_31_plast_kartoner",
+>>>>>>> 7ac29b45a844a3b5bd46f3e8b6b9672c208fe669
               "countdown_days", 1) }}
         sequence:
           - service: notify.notifier_agurk
@@ -247,5 +266,9 @@ action:
               message: I morgen hentes mad og plast
     default: []
 mode: single
+<<<<<<< HEAD
 ```
 
+=======
+```
+>>>>>>> 7ac29b45a844a3b5bd46f3e8b6b9672c208fe669
