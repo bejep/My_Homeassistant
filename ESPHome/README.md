@@ -39,6 +39,8 @@ logger:
 
 # Enable Home Assistant API
 api:
+  encryption:
+    key: "GB7N+mCaGIK8iTWUGDBFHvHAfYQ69cdKYN4iUh3rp2M="
 
 ota:
 
@@ -77,7 +79,12 @@ binary_sensor:
     id: bad
     entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_on_off
     internal: true
-    
+
+  - platform: homeassistant
+    id: altan
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening
+    internal: true
+
   - platform: gpio
     pin: 
       number: D3
@@ -120,6 +127,7 @@ i2c:
   sda: D1
   scl: D2
   scan: False
+  frequency: 800kHz
 
 display:
   - platform: ssd1306_i2c
@@ -127,12 +135,13 @@ display:
     id: my_display
 #    reset_pin: D0
     address: 0x3C
+    update_interval: 2s
     pages:
       - id: page1
         lambda: |-
 
           // Print time in HH:MM format
-          it.strftime(127, 20, id(my_font1), TextAlign::BASELINE_RIGHT, "%H:%M", id(esptime).now());
+           it.strftime(0, 20, id(my_font1), TextAlign::BASELINE_LEFT, "%H:%M", id(esptime).now());
       
           it.printf(0, 60, id(my_font), TextAlign::BASELINE_LEFT, "M: %s", id(pir_sensor).state ? "ON" : "OFF");
       
@@ -140,19 +149,21 @@ display:
 
           it.printf(127, 50, id(my_font), TextAlign::BASELINE_RIGHT, "Sleep: %s", id(gate).state ? "OPEN" : "CLOSED");
       
-          it.printf(127, 40, id(my_font), TextAlign::BASELINE_RIGHT, "Bath: %s", id(bad).state ? "OPEN" : "CLOSED"); 
+          it.printf(127, 30, id(my_font), TextAlign::BASELINE_RIGHT, "Altan: %s", id(altan).state ? "OPEN" : "CLOSED");
+
+          it.printf(127, 40, id(my_font), TextAlign::BASELINE_RIGHT, "Bad: %s", id(bad).state ? "OPEN" : "CLOSED"); 
       
-          it.printf(0, 40, id(my_font), TextAlign::BASELINE_LEFT, "Wash:");      
+          it.printf(0, 40, id(my_font), TextAlign::BASELINE_LEFT, "Vask:");      
           it.printf(0, 50, id(my_font), TextAlign::BASELINE_LEFT, "%.1fW", id(vaskemaskine_forbrug).state); 
       
           // Print inside temperature (from homeassistant sensor)
           if (id(inside_temperature).has_state()) {
-            it.printf(0, 10, id(my_font), TextAlign::BASELINE_LEFT , "In     %.1f°", id(inside_temperature).state);
+            it.printf(127, 10, id(my_font), TextAlign::BASELINE_RIGHT , "In     %.1f°", id(inside_temperature).state);
           }
 
           // Print outside temperature (from homeassistant sensor)
           if (id(outside_temperature).has_state()) {
-            it.printf(0, 20, id(my_font), TextAlign::BASELINE_LEFT , "Out   %.1f°", id(outside_temperature).state);
+            it.printf(127, 20, id(my_font), TextAlign::BASELINE_RIGHT , "Out   %.1f°", id(outside_temperature).state);
           }
       - id: page2
         lambda: |-
@@ -198,6 +209,8 @@ logger:
 
 # Enable Home Assistant API
 api:
+  encryption:
+    key: "LGKc6vEtkfVMFWHMEIrwQ2eMYw7kdY3EAmLrhtBJLt8="
 
 ota:
 
@@ -262,6 +275,8 @@ logger:
 
 # Enable Home Assistant API
 api:
+ encryption:
+    key: "A41dU2RTGN1nlJWg+ChbCDGCu0wRFEJnWxZxfvcPZJk="
 
 ota:
 
@@ -273,6 +288,14 @@ sensor:
     address: 0x4B3C01B5567D6928
     resolution: 12
     accuracy_decimals: 2
-    name: "Temperature #1" 
+    name: "Temperature #1"
+    filters:
+      - lambda: return x + 1.6;
+  - platform: dallas
+    address: 0x333CABF649BE4D28
+    # 0xf43c01f09646bf28
+    resolution: 12
+    accuracy_decimals: 2
+    name: "Temperature #4"  
 ```
 

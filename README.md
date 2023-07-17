@@ -41,6 +41,7 @@
 - Eloverblik
 - Watchman
 - browser_mod
+- Odense Renovation
 #### Frontend
 - Apexcharts-card
 - button-card
@@ -55,6 +56,7 @@
 - [Bevægelse Entre](./Automatiseringer/README.md#2-entre)
 - [NY Post alarm](./Automatiseringer/README.md#3-postkasse-alarm)
 - [Vaskemaskine færdig](./Automatiseringer/README.md#4-vaskemaskine-færdig)
+- [Affaldstømning](./Automatiseringer/README.md#5-affaldstømning)
 ## 6. ESPresense og MQTT
 - kommer senere
 ## 7. 

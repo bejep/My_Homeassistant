@@ -13,7 +13,7 @@
 
 <img src="./Images/Companion1.jpg" width=35% height=35%>
 
-- **ESPresense** (en anden Decive trackrer)
+- **ESPresense** (en anden Decive tracker)
   - se [**6. ESPresense og MQTT**](../README.md#6-espresense-og-mqtt)<br><br>
 
 - **Definer gruppe** (/config/groups.yaml)<br>
@@ -211,3 +211,41 @@ use_blueprint:
     finishing_hysteresis: 3
 
 ```
+
+## 5. Affaldstømning
+- HACS for Odense Renovation installeret<br>
+- Dagen før kl. 18 sendes en meddelelse via Telegram<br>
+- YAML kode
+```YAML
+alias: affald
+description: ""
+trigger:
+  - platform: time
+    at: "18:00:00"
+condition: []
+action:
+  - choose:
+      - conditions:
+          - condition: template
+            value_template: >-
+              {{
+              is_state_attr("sensor.odense_renovation_odense_reno_xxxxxx_glas_metal_papir",
+              "countdown_days", 1) }}
+        sequence:
+          - service: notify.notifier_agurk
+            data:
+              message: I morgen hentes mad  metal og papir
+      - conditions:
+          - condition: template
+            value_template: >-
+              {{
+              is_state_attr("sensor.odense_renovation_odense_reno_xxxxxx_plast_kartoner",
+              "countdown_days", 1) }}
+        sequence:
+          - service: notify.notifier_agurk
+            data:
+              message: I morgen hentes mad og plast
+    default: []
+mode: single
+```
+
