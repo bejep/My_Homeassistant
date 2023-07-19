@@ -220,6 +220,7 @@ use_blueprint:
 
 ## 5. Affaldstømning
 - HACS for Odense Renovation installeret<br>
+- https://github.com/fars-fede-fire/odense_reno<br>
 - Dagen før kl. 18 sendes en meddelelse via Telegram<br>
 - YAML kode
 ```YAML
