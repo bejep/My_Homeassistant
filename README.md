@@ -11,7 +11,7 @@
 - Aqara Door and Window sensor
 - Aqara Vibration sensor
 - Ikea TRÅDFRI LED-pærer og kontakter
-- Shelly 1PM og Shelly Plug S
+- Shelly Plus 1PM Shelly Plug S og Shelly PM Mini
 
   
 ## 1. HomeAssistant installation
@@ -52,6 +52,7 @@
 - Mushroom
 - slider-entity-card
 - Simple Clock Card
+- Sonos Card
 ## 3. Lovelace                 
 ## 4. Automatiseringer
 - [Personstyring](./Automatiseringer/README.md#1-personstyring)
