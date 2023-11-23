@@ -209,7 +209,7 @@ use_blueprint:
   path: >-
     sbyx/notify-or-do-something-when-an-appliance-like-a-dishwasher-or-washing-machine-finishes.yaml
   input:
-    power_sensor: sensor.shelly1pm_8caab55fd8f1_power
+    power_sensor: sensor.shellyplus1pm_d4d4da7c99f8_switch_0_power
     actions:
       - service: notify.notifier_agurk
         data:
