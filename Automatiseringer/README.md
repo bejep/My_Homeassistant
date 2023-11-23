@@ -97,9 +97,14 @@ trigger:
       minutes: 0
       seconds: 0
 condition:
-  - condition: state
-    entity_id: sun.sun
-    state: below_horizon
+  - condition: or
+    condition:
+      - condition: nummeric_state
+        entity_id: sensor.light_2
+        below: 50
+      - condition: state
+        entity_id: sun.sun
+        state: below_horizon
 action:
   - choose:
       - conditions:
