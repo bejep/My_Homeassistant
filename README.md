@@ -60,6 +60,7 @@
 - [NY Post alarm](./Automatiseringer/README.md#3-postkasse-alarm)
 - [Vaskemaskine færdig](./Automatiseringer/README.md#4-vaskemaskine-færdig)
 - [Affaldstømning](./Automatiseringer/README.md#5-affaldstømning)
+- [Julelys](./Automatiseringer/README.md#6-julelys-automatik)
 ## 6. ESPresense og MQTT
 - kommer senere
 ## 7. 
