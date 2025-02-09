@@ -10,6 +10,7 @@
   -  Esp8266 Wemos D1 Mini
   -  Display OLED LCD 0.96" 12864 I2C
   -  Motion PIR Module HC-SR501
+  -  LDR modstand
     
 <img src="./Images/Entre_0.jpg" width=35% height=35%>
 
@@ -61,8 +62,18 @@ sensor:
     
   - platform: homeassistant
     id: vaskemaskine_forbrug
-    entity_id: sensor.shelly1pm_8caab55fd8f1_power
+    entity_id: sensor.shelly1pm_d4d4da7c99f8_switch_0_power
     internal: true
+  
+  - platform: adc
+    pin: A0
+    id: entre_lux
+    name: "entre lux"
+    update_interval: '30s'
+    unit_of_measurement: lu
+    filters:
+       lambda: |-
+          return (x / 1000.0) * 2000000.0;
   
 binary_sensor:
   - platform: homeassistant
@@ -143,7 +154,7 @@ display:
           // Print time in HH:MM format
            it.strftime(0, 20, id(my_font1), TextAlign::BASELINE_LEFT, "%H:%M", id(esptime).now());
       
-          it.printf(0, 60, id(my_font), TextAlign::BASELINE_LEFT, "M: %s", id(pir_sensor).state ? "ON" : "OFF");
+          it.printf(0, 60, id(my_font), TextAlign::BASELINE_LEFT, "lux: %.0f", id(entre_lux).state);
       
           it.printf(127, 60, id(my_font), TextAlign::BASELINE_RIGHT, "Door: %s", id(front_door).state ? "OPEN" : "CLOSED");
 

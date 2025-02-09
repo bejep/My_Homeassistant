@@ -97,9 +97,14 @@ trigger:
       minutes: 0
       seconds: 0
 condition:
-  - condition: state
-    entity_id: sun.sun
-    state: below_horizon
+  - condition: or
+    condition:
+      - condition: nummeric_state
+        entity_id: sensor.light_2
+        below: 50
+      - condition: state
+        entity_id: sun.sun
+        state: below_horizon
 action:
   - choose:
       - conditions:
@@ -204,7 +209,7 @@ use_blueprint:
   path: >-
     sbyx/notify-or-do-something-when-an-appliance-like-a-dishwasher-or-washing-machine-finishes.yaml
   input:
-    power_sensor: sensor.shelly1pm_8caab55fd8f1_power
+    power_sensor: sensor.shellyplus1pm_d4d4da7c99f8_switch_0_power
     actions:
       - service: notify.notifier_agurk
         data:
@@ -255,3 +260,49 @@ actions:
 mode: single
 ```
 
+## 6. Julelys automatik
+- Julelys tænder ved solnedgang og slukker kl. 23
+- Julelys tænder kl. 6.30 og slukker ved solopgang
+- Bruger tænd/sluk relæ [Tænd/sluk relæ m. ESP8266-12](ESPHome/README.md#4-tændsluk-relæ-m-esp8266-12)
+- YAML kode
+```YAML
+alias: Outdoor light on
+description: Tænder udendørs lys ved skumring
+trigger:
+  - platform: sun
+    event: sunset
+    offset: "+0:00:00"
+condition: []
+action:
+  - type: turn_on
+    device_id: 4bc5cef82ee22c1271d1d25126d5f2e6
+    entity_id: switch.light_relay_1
+    domain: switch
+  - service: notify.notifier_agurk
+    data:
+      title: message from the dark side
+      message: esp8266-12 lys tændt
+  - wait_for_trigger:
+      - platform: time
+        at: "23:00:00"
+  - type: turn_off
+    device_id: 4bc5cef82ee22c1271d1d25126d5f2e6
+    entity_id: switch.light_relay_1
+    domain: switch
+  - wait_for_trigger:
+      - platform: time
+        at: "06:30:00"
+  - type: turn_on
+    device_id: 4bc5cef82ee22c1271d1d25126d5f2e6
+    entity_id: switch.light_relay_1
+    domain: switch
+  - wait_for_trigger:
+      - platform: sun
+        event: sunrise
+        offset: "+0:00:00"
+  - type: turn_off
+    device_id: 4bc5cef82ee22c1271d1d25126d5f2e6
+    entity_id: switch.light_relay_1
+    domain: switch
+mode: single
+```

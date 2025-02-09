@@ -11,7 +11,7 @@
 - Aqara Door and Window sensor
 - Aqara Vibration sensor
 - Ikea TRÅDFRI LED-pærer og kontakter
-- Shelly 1PM og Shelly Plug S
+- Shelly Plus 1PM Shelly Plug S og Shelly PM Mini
 
   
 ## 1. HomeAssistant installation
@@ -68,6 +68,7 @@
 - [NY Post alarm](./Automatiseringer/README.md#3-postkasse-alarm)
 - [Vaskemaskine færdig](./Automatiseringer/README.md#4-vaskemaskine-færdig)
 - [Affaldstømning](./Automatiseringer/README.md#5-affaldstømning)
+- [Julelys](./Automatiseringer/README.md#6-julelys-automatik)
 ## 6. ESPresense og MQTT
 - kommer senere
 ## 7. 
