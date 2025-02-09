@@ -40,18 +40,27 @@
 #### Integrationer
 - nordpool
 - Eloverblik
+- Energi Data Service
+- Easee EV charger
+- EV Smart Charging
+- Kia Uvo / Hyundai Bluelink
 - Watchman
 - browser_mod
-- Odense Renovation
-#### Frontend
+- Affaldshåndtering DK 
+#### Dashboard
 - Apexcharts-card
-- button-card
+- auto-entities
+- Bar Card
+- Bubble Card
+- Button Card by @RomRider
 - layout-card
 - Mini Media Player
 - mini-graph-card
 - Mushroom
+- Slider button card by @mattieha
 - slider-entity-card
 - Simple Clock Card
+- Sonos Card
 ## 3. Lovelace                 
 ## 4. Automatiseringer
 - [Personstyring](./Automatiseringer/README.md#1-personstyring)

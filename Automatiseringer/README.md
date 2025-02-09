@@ -219,39 +219,38 @@ use_blueprint:
 ```
 
 ## 5. Affaldstømning
-- HACS for Odense Renovation installeret<br>
-- https://github.com/fars-fede-fire/odense_reno<br>
+- HACS for Affaldshåndtering DK installeret<br>
+- Følg vejledning i dokumentation for Affaldshåndtering DK<br>
 - Dagen før kl. 18 sendes en meddelelse via Telegram<br>
 - YAML kode
 ```YAML
 alias: affald
 description: ""
-trigger:
-  - platform: time
-    at: "18:00:00"
-condition: []
-action:
+triggers:
+  - at: "18:00:00"
+    trigger: time
+conditions: []
+actions:
   - choose:
       - conditions:
           - condition: template
             value_template: >-
-              {{
-              is_state_attr("sensor.odense_renovation_odense_reno_xxxxxx_glas_metal_papir",
-              "countdown_days", 1) }}
+              {{ is_state("sensor.Affalddk_fengersvej_31_pap_papir_glas_Metal",
+              "1") }}
         sequence:
-          - service: notify.notifier_agurk
-            data:
+          - data:
               message: I morgen hentes mad  metal og papir
+            action: notify.notifier_agurk
       - conditions:
           - condition: template
             value_template: >-
               {{
-              is_state_attr("sensor.odense_renovation_odense_reno_xxxxxx_plast_kartoner",
-              "countdown_days", 1) }}
+              is_state_attr("sensor.Affalddk_fengersvej_31_plast_mad_drikkekartoner",
+              "1") }}
         sequence:
-          - service: notify.notifier_agurk
-            data:
+          - data:
               message: I morgen hentes mad og plast
+            action: notify.notifier_agurk
     default: []
 mode: single
 ```
